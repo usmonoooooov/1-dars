@@ -230,6 +230,17 @@ a   { text-decoration: none; color: inherit; }
   gap: 1.2rem;
 }
 
+@media (min-width: 769px) {
+  .catalog-modal { align-items: center; justify-content: center; }
+  .catalog-panel {
+    max-width: 860px;
+    border-radius: 20px;
+    transform: translateY(20px) scale(0.97);
+  }
+  .catalog-modal.open .catalog-panel { transform: translateY(0) scale(1); }
+  .catalog-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
 @media (max-width: 768px) {
   .catalog-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .catalog-body { padding: 1.2rem 1.2rem 2rem; }
